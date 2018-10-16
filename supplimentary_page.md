@@ -7,7 +7,7 @@
 
 
 ||ARN coronal view|SITK coronal view|ARN transaxial view|SITK transaxial view|
-|----|||||
+|----|----|----|----|----|
 |pair 1|![](imgs/b/52533238_to_26018233ARNcoro.png)|![](imgs/b/52533238_to_26018233SITKcoro.png)|![](imgs/b/52533238_to_26018233ARNtrns.png)|![](imgs/b/52533238_to_26018233SITKtrns.png)|
 |pair 2|![](imgs/b/00464985_to_32402804ARNcoro.png)|![](imgs/b/00464985_to_32402804SITKcoro.png)|![](imgs/b/00464985_to_32402804ARNtrns.png)|![](imgs/b/00464985_to_32402804SITKtrns.png)|
 |pair 3|![](imgs/b/62828273_to_29773460ARNcoro.png)|![](imgs/b/62828273_to_29773460SITKcoro.png)|![](imgs/b/62828273_to_29773460ARNtrns.png)|![](imgs/b/62828273_to_29773460SITKtrns.png)|
@@ -15,7 +15,7 @@
 |pair 5|![](imgs/b/24201400_to_00057691ARNcoro.png)|![](imgs/b/24201400_to_00057691SITKcoro.png)|![](imgs/b/24201400_to_00057691ARNtrns.png)|![](imgs/b/24201400_to_00057691SITKtrns.png)|
 |pair 6|![](imgs/b/77142232_to_21486282ARNcoro.png)|![](imgs/b/77142232_to_21486282SITKcoro.png)|![](imgs/b/77142232_to_21486282ARNtrns.png)|![](imgs/b/77142232_to_21486282SITKtrns.png)|
 
-||
+|SITK Setup|
 |---|
 |Sitk Affine registration is configured to opimizes Mattes mutual information with 50 histogram bins. Opitmization is done at 3 levels at 1/4, 1/2, and 1 of original scale. Each scale have a maximum step of 100.|
 
@@ -28,7 +28,7 @@ Affine registration results are often poor when lungs of fixed and moving images
 
 
 ||||||
-|:----|||||
+|----|----|----|----|----|
 ||**fixed image coronal**|**fixed image transaxial**|**moving image coronal**|**moving image transaxial**|
 |pair1 input|![](imgs/f/14020534_to_38176629.fixed_coro.png)|![](imgs/f/14020534_to_38176629.fixed_trns.png)|![](imgs/f/14020534_to_38176629.moving_coro.png)|![](imgs/f/14020534_to_38176629.moving_trns.png)|
 ||**ARN coronal view**|**SITK coronal view**|**ARN transaxial view**|**SITK transaxial view**|
