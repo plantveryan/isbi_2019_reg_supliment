@@ -28,9 +28,8 @@ Example coronal views of of registration output at each stage of the pipeline.
 Examples of registration output where proposed ARN performs better than SITK linear registration.
 It might be possible for optimization based affine registration to diverge when the images are already is good alignment, as seen in patient 4, where as ARN is more robust in such cases.
 
-||Coronal View|||Transversal View|||
-|----|----|----|----|----|----|----|
 ||**Before registration**|**SITK**|**ARN**|**Before registration**|**SITK**|**ARN**|
+|----|----|----|----|----|----|----|
 |Patient 1|![](imgs/b/52533238_to_26018233CAcoro.png)|![](imgs/b/52533238_to_26018233SITKcoro.png)|![](imgs/b/52533238_to_26018233ARNcoro.png)|![](imgs/b/52533238_to_26018233CAtrns.png)|![](imgs/b/52533238_to_26018233SITKtrns.png)|![](imgs/b/52533238_to_26018233ARNtrns.png)|
 |Patient 2|![](imgs/b/00464985_to_32402804CAcoro.png)|![](imgs/b/00464985_to_32402804SITKcoro.png)|![](imgs/b/00464985_to_32402804ARNcoro.png)|![](imgs/b/00464985_to_32402804CAtrns.png)|![](imgs/b/00464985_to_32402804SITKtrns.png)|![](imgs/b/00464985_to_32402804ARNtrns.png)|
 |Patient 3|![](imgs/b/62828273_to_29773460CAcoro.png)|![](imgs/b/62828273_to_29773460SITKcoro.png)|![](imgs/b/62828273_to_29773460ARNcoro.png)|![](imgs/b/62828273_to_29773460CAtrns.png)|![](imgs/b/62828273_to_29773460SITKtrns.png)|![](imgs/b/62828273_to_29773460ARNtrns.png)|
