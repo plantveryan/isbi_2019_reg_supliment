@@ -9,7 +9,7 @@ DRN: Deformable registration network
 
 Hybrid model: ARN+DRN
 
-## A  Hybrid Affine-Deformable Pipeline
+## Our Hybrid Affine-Deformable Registration Method
 ![](imgs/arch_overview.png)
 
 
