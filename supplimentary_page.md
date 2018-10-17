@@ -3,30 +3,61 @@
 
 ----
 
-## Registration output examples where proposed ARN performs better than SITK linear registration  
+## A  Hybrid Affine-Deformable Pipeline
 
+Example coronal views of of registration output at each stage of the pipeline.
 
-||ARN coronal view|SITK coronal view|ARN transaxial view|SITK transaxial view|
+||Before registration|ARN|DRN|DRN Flow Field|
 |----|----|----|----|----|
-|pair 1|![](imgs/b/52533238_to_26018233ARNcoro.png)|![](imgs/b/52533238_to_26018233SITKcoro.png)|![](imgs/b/52533238_to_26018233ARNtrns.png)|![](imgs/b/52533238_to_26018233SITKtrns.png)|
-|pair 2|![](imgs/b/00464985_to_32402804ARNcoro.png)|![](imgs/b/00464985_to_32402804SITKcoro.png)|![](imgs/b/00464985_to_32402804ARNtrns.png)|![](imgs/b/00464985_to_32402804SITKtrns.png)|
-|pair 3|![](imgs/b/62828273_to_29773460ARNcoro.png)|![](imgs/b/62828273_to_29773460SITKcoro.png)|![](imgs/b/62828273_to_29773460ARNtrns.png)|![](imgs/b/62828273_to_29773460SITKtrns.png)|
-|pair 4|![](imgs/b/82307434_to_81987874ARNcoro.png)|![](imgs/b/82307434_to_81987874SITKcoro.png)|![](imgs/b/82307434_to_81987874ARNtrns.png)|![](imgs/b/82307434_to_81987874SITKtrns.png)|
-|pair 5|![](imgs/b/24201400_to_00057691ARNcoro.png)|![](imgs/b/24201400_to_00057691SITKcoro.png)|![](imgs/b/24201400_to_00057691ARNtrns.png)|![](imgs/b/24201400_to_00057691SITKtrns.png)|
-|pair 6|![](imgs/b/77142232_to_21486282ARNcoro.png)|![](imgs/b/77142232_to_21486282SITKcoro.png)|![](imgs/b/77142232_to_21486282ARNtrns.png)|![](imgs/b/77142232_to_21486282SITKtrns.png)|
-
-|SITK Setup|
-|---|
-|Sitk Affine registration is configured to opimizes Mattes mutual information with 50 histogram bins. Opitmization is done at 3 levels at 1/4, 1/2, and 1 of original scale. Each scale have a maximum step of 100.|
+|Patient 1|![](imgs/v/51078172_to_44547538.orig.png)|![](imgs/v/51078172_to_44547538.arn.png)|![](imgs/v/51078172_to_44547538.vm.png)|![](imgs/v/51078172_to_44547538.flow.png)|
+|Patient 2|![](imgs/v/48057819_to_32672488.orig.png)|![](imgs/v/48057819_to_32672488.arn.png)|![](imgs/v/48057819_to_32672488.vm.png)|![](imgs/v/48057819_to_32672488.flow.png)|
+|Patient 3|![](imgs/v/06553963_to_22966903.orig.png)|![](imgs/v/06553963_to_22966903.arn.png)|![](imgs/v/06553963_to_22966903.vm.png)|![](imgs/v/06553963_to_22966903.flow.png)|
+|Patient 4|![](imgs/v/96643212_to_77262879.orig.png)|![](imgs/v/96643212_to_77262879.arn.png)|![](imgs/v/96643212_to_77262879.vm.png)|![](imgs/v/96643212_to_77262879.flow.png)|
+|Patient 5|![](imgs/v/76881768_to_33905433.orig.png)|![](imgs/v/76881768_to_33905433.arn.png)|![](imgs/v/76881768_to_33905433.vm.png)|![](imgs/v/76881768_to_33905433.flow.png)|
+|Patient 6|![](imgs/v/02160131_to_97861724.orig.png)|![](imgs/v/02160131_to_97861724.arn.png)|![](imgs/v/02160131_to_97861724.vm.png)|![](imgs/v/02160131_to_97861724.flow.png)|
+|Patient 7|![](imgs/v/22604050_to_49941516.orig.png)|![](imgs/v/22604050_to_49941516.arn.png)|![](imgs/v/22604050_to_49941516.vm.png)|![](imgs/v/22604050_to_49941516.flow.png)|
+|Patient 8|![](imgs/v/30842140_to_68218850.orig.png)|![](imgs/v/30842140_to_68218850.arn.png)|![](imgs/v/30842140_to_68218850.vm.png)|![](imgs/v/30842140_to_68218850.flow.png)|
+|Patient 9|![](imgs/v/14068610_to_37083249.orig.png)|![](imgs/v/14068610_to_37083249.arn.png)|![](imgs/v/14068610_to_37083249.vm.png)|![](imgs/v/14068610_to_37083249.flow.png)|
+|Patient 10|![](imgs/v/76881768_to_33905433.orig.png)|![](imgs/v/76881768_to_33905433.arn.png)|![](imgs/v/76881768_to_33905433.vm.png)|![](imgs/v/76881768_to_33905433.flow.png)|
 
 
 ----
 
-##  Examples where Dice of lung area after registration is low
+## ARN vs SITK
 
-Affine registration results are often poor when lungs of fixed and moving images have large difference, or when lung segmentation is not ideal.
+Examples of registration output where proposed ARN performs better than SITK linear registration.
+It might be possible for optimization based affine registration to diverge when the images are already is good alignment, as seen in patient 4, where as ARN is more robust in such cases.
+
+||Coronal View|||Transversal View|||
+|----|----|----|----|----|----|----|
+||**Before registration**|**SITK**|**ARN**|**Before registration**|**SITK**|**ARN**|
+|Patient 1|![](imgs/b/52533238_to_26018233CAcoro.png)|![](imgs/b/52533238_to_26018233SITKcoro.png)|![](imgs/b/52533238_to_26018233ARNcoro.png)|![](imgs/b/52533238_to_26018233CAtrns.png)|![](imgs/b/52533238_to_26018233SITKtrns.png)|![](imgs/b/52533238_to_26018233ARNtrns.png)|
+|Patient 2|![](imgs/b/00464985_to_32402804CAcoro.png)|![](imgs/b/00464985_to_32402804SITKcoro.png)|![](imgs/b/00464985_to_32402804ARNcoro.png)|![](imgs/b/00464985_to_32402804CAtrns.png)|![](imgs/b/00464985_to_32402804SITKtrns.png)|![](imgs/b/00464985_to_32402804ARNtrns.png)|
+|Patient 3|![](imgs/b/62828273_to_29773460CAcoro.png)|![](imgs/b/62828273_to_29773460SITKcoro.png)|![](imgs/b/62828273_to_29773460ARNcoro.png)|![](imgs/b/62828273_to_29773460CAtrns.png)|![](imgs/b/62828273_to_29773460SITKtrns.png)|![](imgs/b/62828273_to_29773460ARNtrns.png)|
+|Patient 4|![](imgs/b/82307434_to_81987874CAcoro.png)|![](imgs/b/82307434_to_81987874SITKcoro.png)|![](imgs/b/82307434_to_81987874ARNcoro.png)|![](imgs/b/82307434_to_81987874CAtrns.png)|![](imgs/b/82307434_to_81987874SITKtrns.png)|![](imgs/b/82307434_to_81987874ARNtrns.png)|
+|Patient 5|![](imgs/b/24201400_to_00057691CAcoro.png)|![](imgs/b/24201400_to_00057691SITKcoro.png)|![](imgs/b/24201400_to_00057691ARNcoro.png)|![](imgs/b/24201400_to_00057691CAtrns.png)|![](imgs/b/24201400_to_00057691SITKtrns.png)|![](imgs/b/24201400_to_00057691ARNtrns.png)|
+|Patient 6|![](imgs/b/77142232_to_21486282CAcoro.png)|![](imgs/b/77142232_to_21486282SITKcoro.png)|![](imgs/b/77142232_to_21486282ARNcoro.png)|![](imgs/b/77142232_to_21486282CAtrns.png)|![](imgs/b/77142232_to_21486282SITKtrns.png)|![](imgs/b/77142232_to_21486282ARNtrns.png)|
 
 
+|SITK Setup|
+|----|
+|Sitk Affine registration is configured to opimizes Mattes mutual information with 50 histogram bins. Opitmization is done at 3 levels at 1/4, 1/2, and 1 of original scale. Each scale has a maximum step of 100.|
+
+
+----
+
+##  Tough registration inputs
+
+Lung Dice score after registration could be low when input cases are patients with incomplete and partial CT scans, or patients with severed pulmonary conditions where the lung areas have been obscured by large lesions such as bulla.
+
+||**fixed image coronal**|**fixed image transaxial**|**moving image coronal**|**moving image transaxial**|
+|----|----|----|----|----|
+|Patient 1|![](imgs/f/14020534_to_38176629.fixed_coro.png)|![](imgs/f/14020534_to_38176629.fixed_trns.png)|![](imgs/f/14020534_to_38176629.moving_coro.png)|![](imgs/f/14020534_to_38176629.moving_trns.png)|
+|Patient 2|![](imgs/f/26788410_to_93447078.fixed_coro.png)|![](imgs/f/26788410_to_93447078.fixed_trns.png)|![](imgs/f/26788410_to_93447078.moving_coro.png)|![](imgs/f/26788410_to_93447078.moving_trns.png)|
+|Patient 3|![](imgs/f/20212245_to_51510913.fixed_coro.png)|![](imgs/f/20212245_to_51510913.fixed_trns.png)|![](imgs/f/20212245_to_51510913.moving_coro.png)|![](imgs/f/20212245_to_51510913.moving_trns.png)|
+
+
+<!--- 
 ||||||
 |----|----|----|----|----|
 ||**fixed image coronal**|**fixed image transaxial**|**moving image coronal**|**moving image transaxial**|
@@ -53,5 +84,5 @@ Affine registration results are often poor when lungs of fixed and moving images
 |pair6 input|![](imgs/f/55921267_to_04476681.fixed_coro.png)|![](imgs/f/55921267_to_04476681.fixed_trns.png)|![](imgs/f/55921267_to_04476681.moving_coro.png)|![](imgs/f/55921267_to_04476681.moving_trns.png)|
 ||**ARN coronal view**|**SITK coronal view**|**ARN transaxial view**|**SITK transaxial view**|
 |pair6 output|![](imgs/f/55921267_to_04476681ARNcoro.png)|![](imgs/f/55921267_to_04476681SITKcoro.png)|![](imgs/f/55921267_to_04476681ARNtrns.png)|![](imgs/f/55921267_to_04476681SITKtrns.png)|
-
+-->
 
