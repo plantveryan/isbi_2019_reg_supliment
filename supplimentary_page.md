@@ -3,11 +3,14 @@
 
 ----
 
+ARN: Affine registration network
+DRN: Deformable registration network
+Hybrid model: ARN+DRN
+
 ## A  Hybrid Affine-Deformable Pipeline
 
-Example coronal views of of registration output at each stage of the pipeline.
-
-||Before registration|ARN|DRN|DRN Flow Field|
+Application of the proposed hybrid registration model to chest CT scans. The following figure shows the image pairs before registration, after affine registration, after the hybrid affine-deformable registration. We have also shown the the magnitude of the displacement field for the deformable  registration in the last column. 
+||Before registration|After ARN|After ARN+DRN|DRN Flow Field|
 |----|----|----|----|----|
 |Patient 1|![](imgs/v/51078172_to_44547538.orig.png)|![](imgs/v/51078172_to_44547538.arn.png)|![](imgs/v/51078172_to_44547538.vm.png)|![](imgs/v/51078172_to_44547538.flow.png)|
 |Patient 2|![](imgs/v/48057819_to_32672488.orig.png)|![](imgs/v/48057819_to_32672488.arn.png)|![](imgs/v/48057819_to_32672488.vm.png)|![](imgs/v/48057819_to_32672488.flow.png)|
@@ -24,9 +27,7 @@ Example coronal views of of registration output at each stage of the pipeline.
 ----
 
 ## ARN vs SITK
-
-Examples of registration output where proposed ARN performs better than SITK linear registration.
-It might be possible for optimization based affine registration to diverge when the images are already is good alignment, as seen in patient 4, whereas ARN could be more robust in such cases.
+The following figure hsows a head-to-head comparison between the proposed ARN and the commonly used affine registration method from the SITK library. As seen, the ARN outperforms SITK qualitatively (please see the paper for quantitative comparisons). It might be possible for the affine registration to diverge when the images are already in good alignment, as seen in patient 4, in which case ARN exhibits more stable and robust performance.
 
 ||**Before registration**|**SITK**|**ARN**|**Before registration**|**SITK**|**ARN**|
 |----|----|----|----|----|----|----|
@@ -40,14 +41,14 @@ It might be possible for optimization based affine registration to diverge when 
 
 |SITK Setup|
 |----|
-|Sitk Affine registration is configured to opimizes Mattes mutual information with 50 histogram bins. Opitmization is done at 3 levels at 1/4, 1/2, and 1 of original scale. Each scale has a maximum step of 100.|
+|Sitk Affine registration is configured to opimize Mattes mutual information with 50 histogram bins. Opitmization is done at 3 levels at 1/4, 1/2, and 1 of original scale. Each scale has a maximum step of 100.|
 
 
 ----
 
-##  Tough registration inputs
+##  Challenging cases for registration
 
-Lung Dice score after registration could be low when input cases are patients with incomplete and partial CT scans, or patients with severed pulmonary conditions where the lung areas have been obscured by large lesions such as bulla.
+Lung Dice score after registration could be low when input cases are patients with incomplete and/or partial CT scans, or patients with severe pulmonary conditions where the lung areas show large lesions such as bulla or pneumothorax.
 
 ||**fixed coronal**|**moving coronal**|**fixed transversal**|**moving transversal**|
 |----|----|----|----|----|
