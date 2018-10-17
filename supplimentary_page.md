@@ -10,6 +10,7 @@ Hybrid model: ARN+DRN
 ## A  Hybrid Affine-Deformable Pipeline
 
 Application of the proposed hybrid registration model to chest CT scans. The following figure shows the image pairs before registration, after affine registration, after the hybrid affine-deformable registration. We have also shown the the magnitude of the displacement field for the deformable  registration in the last column. 
+
 ||Before registration|After ARN|After ARN+DRN|DRN Flow Field|
 |----|----|----|----|----|
 |Patient 1|![](imgs/v/51078172_to_44547538.orig.png)|![](imgs/v/51078172_to_44547538.arn.png)|![](imgs/v/51078172_to_44547538.vm.png)|![](imgs/v/51078172_to_44547538.flow.png)|
