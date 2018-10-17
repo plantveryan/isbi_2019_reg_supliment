@@ -26,7 +26,7 @@ Example coronal views of of registration output at each stage of the pipeline.
 ## ARN vs SITK
 
 Examples of registration output where proposed ARN performs better than SITK linear registration.
-It might be possible for optimization based affine registration to diverge when the images are already is good alignment, as seen in patient 4, where as ARN is more robust in such cases.
+It might be possible for optimization based affine registration to diverge when the images are already is good alignment, as seen in patient 4, whereas ARN could be more robust in such cases.
 
 ||**Before registration**|**SITK**|**ARN**|**Before registration**|**SITK**|**ARN**|
 |----|----|----|----|----|----|----|
