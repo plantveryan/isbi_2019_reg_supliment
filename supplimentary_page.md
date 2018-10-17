@@ -50,11 +50,11 @@ It might be possible for optimization based affine registration to diverge when 
 
 Lung Dice score after registration could be low when input cases are patients with incomplete and partial CT scans, or patients with severed pulmonary conditions where the lung areas have been obscured by large lesions such as bulla.
 
-||**fixed coronal**|**fixed transversal**|**moving coronal**|**moving transversal**|
+||**fixed coronal**|**moving coronal**|**fixed transversal**|**moving transversal**|
 |----|----|----|----|----|
-|Patient 1|![](imgs/f/14020534_to_38176629.fixed_coro.png)|![](imgs/f/14020534_to_38176629.fixed_trns.png)|![](imgs/f/14020534_to_38176629.moving_coro.png)|![](imgs/f/14020534_to_38176629.moving_trns.png)|
-|Patient 2|![](imgs/f/26788410_to_93447078.fixed_coro.png)|![](imgs/f/26788410_to_93447078.fixed_trns.png)|![](imgs/f/26788410_to_93447078.moving_coro.png)|![](imgs/f/26788410_to_93447078.moving_trns.png)|
-|Patient 3|![](imgs/f/20212245_to_51510913.fixed_coro.png)|![](imgs/f/20212245_to_51510913.fixed_trns.png)|![](imgs/f/20212245_to_51510913.moving_coro.png)|![](imgs/f/20212245_to_51510913.moving_trns.png)|
+|Patient 1|![](imgs/f/14020534_to_38176629.fixed_coro.png)|![](imgs/f/14020534_to_38176629.moving_coro.png)|![](imgs/f/14020534_to_38176629.fixed_trns.png)|![](imgs/f/14020534_to_38176629.moving_trns.png)|
+|Patient 2|![](imgs/f/26788410_to_93447078.fixed_coro.png)|![](imgs/f/26788410_to_93447078.moving_coro.png)|![](imgs/f/26788410_to_93447078.fixed_trns.png)|![](imgs/f/26788410_to_93447078.moving_trns.png)|
+|Patient 3|![](imgs/f/20212245_to_51510913.fixed_coro.png)|![](imgs/f/20212245_to_51510913.moving_coro.png)|![](imgs/f/20212245_to_51510913.fixed_trns.png)|![](imgs/f/20212245_to_51510913.moving_trns.png)|
 
 
 <!--- 
