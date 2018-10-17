@@ -3,8 +3,10 @@
 
 ----
 
-ARN: Affine registration network
+ARN: Affine registration network 
+
 DRN: Deformable registration network
+
 Hybrid model: ARN+DRN
 
 ## A  Hybrid Affine-Deformable Pipeline
